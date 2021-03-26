@@ -7,21 +7,6 @@ html, body, figure, img, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, li
     text-decoration: none;
 }
 
-.container{
-    width: 100%;
-    max-width: 1040px;
-    margin: 0 auto;
-    padding: 30px;
-    border-radius: 3px;
-    background-color: #2f2f2fd9;
-}
-
-.linha {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-}
-
 .hidden {
     display: none;
 }
@@ -39,7 +24,7 @@ body {
 /* HEADER */
 header{
     background-color: #2f2f2fd9;
-    padding: 35px 0 0;
+    padding: 30px 30px 0;
 }
 
 header .container{
@@ -51,25 +36,18 @@ header .linha{
     background-color: #2f2f2fd9;
 }
 
-header .coluna{
-}
-
 header .coluna-esquerda {
     flex-basis: 30%;
 }
 
 header .coluna-direita{
     flex-basis: 65%;
-    padding: 10px 0 0;
+    text-align: center;
 }
 
-header .coluna figure {}
-
 header .coluna img {
-    max-width: 230px;
-    margin: 0px 15px;
-    border-radius: 100%;
-
+    max-width: 100%; 
+    
 }
 
 header .coluna h1{
@@ -77,12 +55,10 @@ header .coluna h1{
     color: #bd8d0e;
 }
 
-
 header .coluna p{
     font-size: 1rem;
     color: #39d801c9;
 }
-
 
 header .coluna ul{
     margin: 16px 0 0;
@@ -90,9 +66,7 @@ header .coluna ul{
 
 header .coluna ul li{
     padding: 0px 0px 10px;
-    
 }
-
 
 header .coluna ul li a{
     font-size: 1rem;
@@ -100,6 +74,7 @@ header .coluna ul li a{
 }
 
 /* FOOTER */
+
 footer{
     background-color: #2f2f2fd9;
 }
@@ -107,12 +82,6 @@ footer{
 footer .container{
     background-color: #5a5a5a;
 }
-
-footer nav{}
-
-footer nav ul{}
-
-footer nav ul li{}
 
 footer nav ul li a{
     color: white;
@@ -123,11 +92,9 @@ footer nav .info-contato {
     margin: -5px 0 -115px;
 }
 
-footer nav .info-contato li{
-    margin: 0 0 17px;
+footer nav .info-contato li {
+    margin: 5px 0px 20px;
 }
-
-footer nav .info-contato li a{}
 
 footer nav .redes-sociais {
     display: flex;
@@ -151,31 +118,24 @@ footer nav .redes-sociais li a img{
     max-width: 40px;
 }
 
-footer nav .redes-sociais li a img p{}
-
-
 /* PÁGINA INICIAL */
 main{
     background-color: #2f2f2fd9;
 }
 
-main .container{}
-
-main .linha{}
-
-main .coluna{}
-
-main .coluna-esquerda{}
-
+main .coluna{
+    padding: 20px 20px 0px 20px;
+    text-align: justify;
+}
 main .coluna-direita{
-    margin: 15px;
+    
+    text-align: justify;
 }
 
 main .coluna section{
-    border: 1px solid #bd8d0e;
-    margin: 10px 0 20px;
-    padding: 20px;
-    min-height: 200px;
+    border-bottom: 1px solid #bd8d0e;
+    margin: 0 0 20px;
+    
 }
 
 main .coluna section h2{
@@ -183,14 +143,11 @@ main .coluna section h2{
     color: #bd8d0e;
 }
 
-main .coluna section p{
+main .coluna section p {
     font-family: 0.9rem;
     color: white;
     line-height: 1.5rem;
-}
-
-main .coluna section ul{
-    
+    margin: 0 0 10px;
 }
 
 main .coluna section ul li{
@@ -211,11 +168,55 @@ main .coluna section ul li strong{
     
 }
 
-main .coluna section ul li p{}
-
-
 /* EXTRAS */
 
 
 
 /* @MÉDIA */
+
+@media only screen and (min-width: 768px){
+    .linha {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    }
+
+    header{
+    padding: 30px 0 0;
+    }
+    header .coluna img {
+        width: 100%; 
+        margin: 0px 15px;
+        border-radius: 100%;
+    }
+    .container{
+        width: 100%;
+        max-width: 1040px;
+        margin: 0px auto;
+        padding: 30px;
+        background-color: #2f2f2fd9;
+    }
+    header .coluna-direita{
+        text-align: left;    
+    }
+    main .coluna section{
+        border: 1px solid #bd8d0e;
+        padding: 20px;
+        min-height: 217px;
+    }
+    main .coluna{
+        padding: 0;
+    }
+    main .coluna section p {
+        font-family: 0.9rem;
+        color: white;
+        line-height: 1.5rem;
+    }
+    footer nav .info-contato li{
+        margin: 0 0 17px;
+    }
+
+
+
+}
