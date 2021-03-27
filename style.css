@@ -6,15 +6,24 @@ html, body, figure, img, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, li
     list-style: none;
     text-decoration: none;
 }
-
-.hidden {
-    display: none;
-}
-
 .coluna{
     flex-basis: 47%;
     
 }
+
+:root{
+    --corBackrgroudPrimaria: #2f2f2fd9; 
+    --corBackrgroudSecundaria: #5a5a5a; 
+    --corBackgoundDark: #0e0e0e;
+    --corTextoTitulo: #bd8d0e;
+    --corTextoDescricao: rgb(255, 255, 255);
+    
+}
+.hidden {
+    display: none;
+}
+
+
 /* BODY */
 body {
     font-family: 'Open-sans', sans-serif;
@@ -23,17 +32,17 @@ body {
 
 /* HEADER */
 header{
-    background-color: #2f2f2fd9;
+    background-color: var(--corBackrgroudPrimaria);
     padding: 30px 30px 0;
 }
 
 header .container{
-    background-color: #2f2f2fd9;
+    background-color: var(--corBackrgroudPrimaria);
 }
 
 header .linha{
     align-items: center;
-    background-color: #2f2f2fd9;
+    background-color: var(--corBackrgroudPrimaria);
 }
 
 header .coluna-esquerda {
@@ -51,17 +60,19 @@ header .coluna img {
 }
 
 header .coluna h1{
-    font-size: 1.7rem;
-    color: #bd8d0e;
+    font-size: 1.5rem;
+    color:var(--corTextoTitulo);
 }
 
 header .coluna p{
     font-size: 1rem;
-    color: #39d801c9;
+    color: var(--corTextoTitulo);
+    padding: 10px 0 0 0;
 }
 
 header .coluna ul{
     margin: 16px 0 0;
+    
 }
 
 header .coluna ul li{
@@ -70,26 +81,27 @@ header .coluna ul li{
 
 header .coluna ul li a{
     font-size: 1rem;
-    color: #fff;
+    color: var(--corTextoDescricao);
 }
 
 /* FOOTER */
 
 footer{
-    background-color: #2f2f2fd9;
+    background-color:var(--corBackrgroudPrimaria);
 }
 
 footer .container{
-    background-color: #5a5a5a;
+    background-color: var(--corBackrgroudSecundaria);
 }
 
 footer nav ul li a{
-    color: white;
+    color: var(--corTextoDescricao);
 }
 
 footer nav .info-contato {
     text-align: center;
     margin: -5px 0 -115px;
+    color: var(--corTextoDescricao);
 }
 
 footer nav .info-contato li {
@@ -101,7 +113,7 @@ footer nav .redes-sociais {
     justify-content: center;
     margin: 150px 0 -15px;
     padding: 0 0 0;
-    border-top: 2px solid #bd8d0e;
+    border-top: 2px solid var(--corTextoTitulo);
 }
 
 footer nav .redes-sociais li{
@@ -120,7 +132,7 @@ footer nav .redes-sociais li a img{
 
 /* PÁGINA INICIAL */
 main{
-    background-color: #2f2f2fd9;
+    background-color: var(--corBackrgroudPrimaria);
 }
 
 main .coluna{
@@ -133,31 +145,31 @@ main .coluna-direita{
 }
 
 main .coluna section{
-    border-bottom: 1px solid #bd8d0e;
+    border-bottom: 1px solid var(--corTextoTitulo);
     margin: 0 0 20px;
     
 }
 
 main .coluna section h2{
-    font-size: 1.3rem;
-    color: #bd8d0e;
+    font-size: 1.2rem;
+    color: var(--corTextoTitulo);
 }
 
 main .coluna section p {
     font-family: 0.9rem;
-    color: white;
+    color: var(--corTextoDescricao);
     line-height: 1.5rem;
     margin: 0 0 10px;
 }
 
 main .coluna section ul li{
     margin: 5px 0 12px;
-    color: white;
+    color: var(--corTextoDescricao);
    
 }
 
 main .coluna section ul li h3{
-    color: #39d801c9;
+    color: var(--corTextoSub);
     
 }
 
@@ -169,8 +181,32 @@ main .coluna section ul li strong{
 }
 
 /* EXTRAS */
+.ativar-dark{
+    width: 50px;
+    height: 50px;
+    display: inline;
+    margin: 100px;
+}
 
+.ativar-dark:checked ~ .dark-mode{
+    --corBackrgroudPrimaria: #000;
+    --corBackrgroudSecundaria: #000;
+    --corTextoTitulo: #fff;
+    --corTextoDescricao:#fff;
+}
 
+.ativar-dark:checked ~ .dark-mode header{
+    --corBackrgroudSecundaria: #000;
+}
+.ativar-dark:checked ~ .dark-mode header .container{
+    background-color: var(--corBackgoundDark) ;
+}
+.ativar-dark:checked ~ .dark-mode .container{
+    background-color: var(--corBackgoundDark) ;
+}
+.ativar-dark:checked ~ .dark-mode main{
+    background-color: var(--corBackrgroudSecundaria);
+}
 
 /* @MÉDIA */
 
@@ -195,13 +231,13 @@ main .coluna section ul li strong{
         max-width: 1040px;
         margin: 0px auto;
         padding: 30px;
-        background-color: #2f2f2fd9;
+        background-color: var(--corBackrgroudPrimaria);
     }
     header .coluna-direita{
         text-align: left;    
     }
     main .coluna section{
-        border: 1px solid #bd8d0e;
+        border: 1px solid var(--corTextoTitulo);
         padding: 20px;
         min-height: 217px;
     }
@@ -210,13 +246,11 @@ main .coluna section ul li strong{
     }
     main .coluna section p {
         font-family: 0.9rem;
-        color: white;
+        color: var(--corTextoDescricao);
         line-height: 1.5rem;
     }
     footer nav .info-contato li{
         margin: 0 0 17px;
     }
-
-
 
 }
