@@ -12,11 +12,11 @@ html, body, figure, img, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, li
 }
 
 :root{
-    --corBackrgroudPrimaria: #2f2f2fd9; 
-    --corBackrgroudSecundaria: #5a5a5a; 
-    --corBackgoundDark: #0e0e0e;
+    --corHeaderMain: rgb(255, 255, 255); 
+    --corFooter: #3d69f7; 
+    --corBackgoundDark: #252525;
     --corTextoTitulo: #bd8d0e;
-    --corTextoDescricao: rgb(255, 255, 255);
+    --corTextoDescricao: rgb(2, 2, 2);
     
 }
 .hidden {
@@ -32,18 +32,18 @@ body {
 
 /* HEADER */
 header{
-    background-color: var(--corBackrgroudPrimaria);
+    background-color: var(--corFooter);
     padding: 30px 30px 0;
     
 }
 
 header .container{
-    background-color: var(--corBackrgroudPrimaria);
+    background-color: var(--corHeaderMain);
 }
 
 header .linha{
     align-items: center;
-    background-color: var(--corBackrgroudPrimaria);
+    background-color: var(--corHeaderMain);
 }
 
 header .coluna-esquerda {
@@ -53,6 +53,7 @@ header .coluna-esquerda {
 header .coluna-direita{
     flex-basis: 65%;
     text-align: center;
+    
 }
 
 header .coluna img {
@@ -88,11 +89,11 @@ header .coluna ul li a{
 /* FOOTER */
 
 footer{
-    background-color:var(--corBackrgroudPrimaria);
+    background-color:var(--corHeaderMain);
 }
 
 footer .container{
-    background-color: var(--corBackrgroudSecundaria);
+    background-color: var(--corFooter);
 }
 
 footer nav ul li a{
@@ -133,7 +134,7 @@ footer nav .redes-sociais li a img{
 
 /* PÁGINA INICIAL */
 main{
-    background-color: var(--corBackrgroudPrimaria);
+    background-color: var(--corHeaderMain);
 }
 
 main .coluna{
@@ -170,7 +171,7 @@ main .coluna section ul li{
 }
 
 main .coluna section ul li h3{
-    color: var(--corTextoSub);
+    color: var(--corTextoDescricao);
     
 }
 
@@ -187,32 +188,64 @@ main .coluna section ul li strong{
   display: none;
     
 }
-label {
-        position: absolute;
-        margin: -8% 0% 2% 62%;
-        border: 2px solid #bd8d0e;
-        border-radius: 20px;
-        background-color: #2f2f2fd9;
-}
-.ativar-dark:checked ~ .dark-mode{
-    --corBackrgroudPrimaria: #000;
-    --corBackrgroudSecundaria: #000;
-    --corTextoTitulo: #fff;
-    --corTextoDescricao:#fff;
+.switch {
+    width: 2.8rem;
+    height: 1.2rem;
+    position: absolute;
+    top: 9%;
+    right: 15%;
+    background-color: var(--corFooter);
+    border-radius: 1rem;
+    border: 2px solid white;
+    box-shadow: var(--corTextoTitulo);
+    transition: backgroud-color 0.3s ease-in-out;
 }
 
+.switch::before {
+    content: "";
+    height: 1.00rem;
+    width: 1.10rem;
+    position: absolute;
+    left: 2px;
+    bottom: 2px;
+    border-radius: 50%;
+    background-color: rgb(253, 253, 253);
+    transition: transform 0.3s ease-in-out;
+
+}
+     
+.ativar-dark:checked ~ .switch{
+    background-color: #000;
+}
+
+.ativar-dark:checked ~ .switch::before {
+    transform: translate(23px);
+}
+
+.ativar-dark:checked ~ .dark-mode{
+    --corHeaderMain: rgb(0, 0, 0);
+    --corFooter: rgb(0, 0, 0);
+    --corTextoTitulo: rgb(130, 110, 21);
+    --corTextoDescricao:#fff;
+}   
+
 .ativar-dark:checked ~ .dark-mode header{
-    --corBackrgroudSecundaria: #000;
+    --corFooter: rgb(0, 0, 0);
 }
 .ativar-dark:checked ~ .dark-mode header .container{
-    background-color: var(--corBackgoundDark) ;
+    background-color: var(--corHeaderMain) ;
 }
 .ativar-dark:checked ~ .dark-mode .container{
-    background-color: var(--corBackgoundDark) ;
+    background-color: var(--corHeaderMain) ;
 }
 .ativar-dark:checked ~ .dark-mode main{
-    background-color: var(--corBackrgroudSecundaria);
+    background-color: var(--corFooter);
 }
+.ativar-dark:checked ~ .dark-mode footer{
+    background-color: var(--corFooter);
+}
+ 
+ 
 
 /* @MÉDIA */
 
@@ -225,7 +258,7 @@ label {
     }
 
     header{
-    padding: 30px 0 0;
+    padding: 15px 0 0;
     }
     header .coluna img {
         width: 100%; 
@@ -237,7 +270,6 @@ label {
         max-width: 1040px;
         margin: 0px auto;
         padding: 30px;
-        background-color: var(--corBackrgroudPrimaria);
     }
     header .coluna-direita{
         text-align: left;    
@@ -258,19 +290,11 @@ label {
     footer nav .info-contato li{
         margin: 0 0 17px;
     }
-    
-    label{
-       
-        margin: 0% 0% 0% 85%;
-    }
 
+    .switch {
+        top: 3.5em;
+        right: 7em;
+    }
 }
-@media only screen and (min-width: 320px){
-    label{
-    
-    margin: -8% 0% 2% 62%;
-    border: 2px solid #bd8d0e;
-    border-radius: 20px;
-    background-color: #2f2f2fd9;
-}
-}
+
+
