@@ -16,7 +16,7 @@ html, body, figure, img, div, input, textarea, p, h1, h2, h3, h4, h5, h6, ul, li
     --corFooter: #3d69f7; 
     --corBackgoundDark: #252525;
     --corTextoTitulo: #bd8d0e;
-    --corTextoDescricao: rgb(2, 2, 2);
+    --corTextoDescricao: rgb(0, 0, 0);
     
 }
 .hidden {
@@ -89,7 +89,8 @@ header .coluna ul li a{
 /* FOOTER */
 
 footer{
-    background-color:var(--corHeaderMain);
+    padding: 5%;
+    background-color:var(--corFooter);
 }
 
 footer .container{
@@ -148,7 +149,6 @@ main .coluna-direita{
 
 main .coluna section{
     border-bottom: 1px solid var(--corTextoTitulo);
-    margin: 0 0 20px;
     
 }
 
@@ -185,71 +185,74 @@ main .coluna section ul li strong{
 /* EXTRAS */
 
 .ativar-dark{
-  display: none;
-    
-}
-.switch {
-    width: 2.8rem;
-    height: 1.2rem;
-    position: absolute;
-    top: 9%;
-    right: 15%;
-    background-color: var(--corFooter);
-    border-radius: 1rem;
-    border: 2px solid white;
-    box-shadow: var(--corTextoTitulo);
-    transition: backgroud-color 0.3s ease-in-out;
-}
-
-.switch::before {
-    content: "";
-    height: 1.00rem;
-    width: 1.10rem;
-    position: absolute;
-    left: 2px;
-    bottom: 2px;
-    border-radius: 50%;
-    background-color: rgb(253, 253, 253);
-    transition: transform 0.3s ease-in-out;
-
-}
-     
-.ativar-dark:checked ~ .switch{
-    background-color: #000;
-}
-
-.ativar-dark:checked ~ .switch::before {
-    transform: translate(23px);
-}
-
-.ativar-dark:checked ~ .dark-mode{
-    --corHeaderMain: rgb(0, 0, 0);
-    --corFooter: rgb(0, 0, 0);
-    --corTextoTitulo: rgb(130, 110, 21);
-    --corTextoDescricao:#fff;
-}   
-
-.ativar-dark:checked ~ .dark-mode header{
-    --corFooter: rgb(0, 0, 0);
-}
-.ativar-dark:checked ~ .dark-mode header .container{
-    background-color: var(--corHeaderMain) ;
-}
-.ativar-dark:checked ~ .dark-mode .container{
-    background-color: var(--corHeaderMain) ;
-}
-.ativar-dark:checked ~ .dark-mode main{
-    background-color: var(--corFooter);
-}
-.ativar-dark:checked ~ .dark-mode footer{
-    background-color: var(--corFooter);
-}
- 
- 
+    display: none;
+      
+  }
+  .switch {
+      width: 2.8rem;
+      height: 1.2rem;
+      position: absolute;
+      top: 11%;
+      right: 15%;
+      background-color: var(--corFooter);
+      border-radius: 1rem;
+      border: 2px solid white;
+      box-shadow: var(--corTextoTitulo);
+      transition: backgroud-color 0.3s ease-in-out;
+  }
+  
+  .switch::before {
+      content: "";
+      height: 1.00rem;
+      width: 1.10rem;
+      position: absolute;
+      left: 2px;
+      bottom: 2px;
+      border-radius: 50%;
+      background-color: rgb(253, 253, 253);
+      transition: transform 0.3s ease-in-out;
+  
+  }
+       
+  .ativar-dark:checked ~ .switch{
+      background-color: #000;
+  }
+  
+  .ativar-dark:checked ~ .switch::before {
+      transform: translate(23px);
+  }
+  
+  .ativar-dark:checked ~ .dark-mode{
+      --corHeaderMain: rgb(0, 0, 0);
+      --corFooter: rgb(0, 0, 0);
+      --corTextoTitulo: rgb(130, 110, 21);
+      --corTextoDescricao:#fff;
+  }   
+  
+  .ativar-dark:checked ~ .dark-mode header{
+      --corFooter: rgb(0, 0, 0);
+  }
+  .ativar-dark:checked ~ .dark-mode header .container{
+      background-color: var(--corHeaderMain) ;
+  }
+  .ativar-dark:checked ~ .dark-mode .container{
+      background-color: var(--corHeaderMain) ;
+  }
+  .ativar-dark:checked ~ .dark-mode main{
+      background-color: var(--corFooter);
+  }
+  .ativar-dark:checked ~ .dark-mode footer{
+      background-color: var(--corFooter);
+  }
 
 /* @MÉDIA */
 
 @media only screen and (min-width: 768px){
+
+    p, h2, li {
+        margin: 10px 0px 10px 0px;
+        padding: 1px 10px 2px 6px;
+    }
     .linha {
     display: flex;
     flex-wrap: wrap;
@@ -276,8 +279,8 @@ main .coluna section ul li strong{
     }
     main .coluna section{
         border: 1px solid var(--corTextoTitulo);
-        padding: 20px;
-        min-height: 217px;
+        margin: 10px 0px 20px;
+        min-height: 277px;
     }
     main .coluna{
         padding: 0;
@@ -287,6 +290,10 @@ main .coluna section ul li strong{
         color: var(--corTextoDescricao);
         line-height: 1.5rem;
     }
+    footer{
+        padding: 1%;
+    }
+    
     footer nav .info-contato li{
         margin: 0 0 17px;
     }
