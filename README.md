@@ -38,13 +38,11 @@ Por meio do desafio 'Start sua Carreira' da Kenzie Academy, foi desenvolvido um 
     -  Cinza escuro: `#252525`;
     -   Preto `#000`;
 
-## O layout
+## Layout
 
-Meu Layout: 
-![](https://github.com/Bruno-Luna/Portifolio/blob/master/layout/desktop.png)
+### Desktop: 
+![](https://github.com/Bruno-Luna/Portifolio/blob/master/layout/desktop.gif)
 
-![](https://github.com/Bruno-Luna/Portifolio/blob/master/layout/desktop-dark.png)
+### Mobile:
+![](https://github.com/Bruno-Luna/Portifolio/blob/master/layout/mobile.gif)
 
-![](https://github.com/Bruno-Luna/Portifolio/blob/master/layout/mobile.png)
-
-![](https://github.com/Bruno-Luna/Portifolio/blob/master/layout/mobile-dark.png)
