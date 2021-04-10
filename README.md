@@ -1,6 +1,8 @@
 # Portifólio
 Por meio do desafio 'Start sua Carreira' da Kenzie Academy, foi desenvolvido um currículo/portifólio, utilizando HTML e CSS. Foi implementado a função 'dark-mode'.
 
+![APM](https://img.shields.io/apm/l/vim-mode?color=blue)
+
 ## Estrutura do diretório:
 
  - Portifolio/
