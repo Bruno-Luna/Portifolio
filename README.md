@@ -1,26 +1,27 @@
 # Portifólio
-Por meio do desafio 'Start sua Carreira' da Kenzie Academy, foi desenvolvido um currículo/portifólio, utilizando HTML e CSS. Foi implementado a função 'dark-mode'.
+Por meio do desafio *'Start sua Carreira'* da *Kenzie Academy*, foi desenvolvido um **currículo/portifólio**, utilizando as tecnologias: HTML e CSS. Foi implementado a função 'dark-mode'.
 
-## Estrutura do diretório:
+### Estrutura do diretório:
 
  - Portifolio/
-	 - index.html
+	
+	- readme.md
+	
+	- index.html
 	 - style/
 		 - style.css
 	 - layout/
-		- desktop
-		- desktop-dark
-		- mobile
-		- mobile-dark 
+		- desktop.gif
+		- mobile.gif
 	- img/
-		- minha-foto
+		- minha-foto.jpg
 	  	- svg/
-			- github-big-logo
-			- linkedin
+			- github-big-logo.svg
+			- linkedin.svg
 	
-## Especificações
+### Especificações:
 
--   Fonte utilizada:  `'Open Sans', sans-serif;`
+-   Fontes utilizadas:  `'Open Sans', sans-serif;`
 -   Cores utilizadas:
     -   Azul:  `#3d69f7`;
     -   Branco:  `#fff`;
@@ -28,23 +29,11 @@ Por meio do desafio 'Start sua Carreira' da Kenzie Academy, foi desenvolvido um 
     -  Cinza escuro: `#252525`;
     -   Preto `#000`;
 	
-## Especificações
+### Layout:
 
--   Fonte utilizada:  `'Open Sans', sans-serif;`
--   Cores utilizadas:
-    -   Azul:  `#3d69f7`;
-    -   Branco:  `#fff`;
-    -   Dourado:  `#bd8d0e`;
-    -  Cinza escuro: `#252525`;
-    -   Preto `#000`;
+#### Desktop: 
+![](https://github.com/Bruno-Luna/Portifolio/blob/master/layout/desktop.gif)
 
-## O layout
+#### Mobile: 
 
-Meu Layout: 
-![](https://github.com/Bruno-Luna/Portifolio/blob/master/layout/desktop.png)
-
-![](https://github.com/Bruno-Luna/Portifolio/blob/master/layout/desktop-dark.png)
-
-![](https://github.com/Bruno-Luna/Portifolio/blob/master/layout/mobile.png)
-
-![](https://github.com/Bruno-Luna/Portifolio/blob/master/layout/mobile-dark.png)
+![](https://github.com/Bruno-Luna/Portifolio/blob/master/layout/mobile.gif)
